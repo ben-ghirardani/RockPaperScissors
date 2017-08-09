@@ -9,7 +9,7 @@ import java.util.Random;
 public class Game {
 
     String[] computer = new String[]{"Rock", "Paper", "Scissors"};
-
+    Game game;
 
     public int countResults() {
         return computer.length;
@@ -22,6 +22,22 @@ public class Game {
         return result;
     }
 
-    
+    public String runGame(String playerChoice, String computerChoice) {
+        if (playerChoice == computerChoice) {
+            return "It's a draw!";
+        } else if (playerChoice == "Rock" && computerChoice == "Paper") {
+            return "Computer wins!";
+        } else if (playerChoice == "Rock" && computerChoice == "Scissors") {
+            return "Player wins!";
+        } else if (playerChoice == "Paper" && computerChoice == "Rock") {
+            return "Player wins!";
+        } else if (playerChoice == "Paper" && computerChoice == "Scissors") {
+            return "Computer wins!";
+        } else if (playerChoice == "Scissors" && computerChoice == "Rock") {
+            return "Computer wins";
+        } else {
+            return "Player wins!"
+        }
+    }
 
 }
