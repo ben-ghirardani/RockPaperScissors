@@ -36,7 +36,7 @@ public class Game {
         } else if (playerChoice == "Scissors" && computerChoice == "Rock") {
             return "Computer wins";
         } else {
-            return "Player wins!"
+            return "Player wins!";
         }
     }
 
